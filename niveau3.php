@@ -31,19 +31,19 @@ while(count($inventaire) < $victoire) {
         $jarres_content[] = "serpent";
     }
 
-    for ($i = count($jarres_content); $i < 5; $i++) {
+    for ($i = count($jarres_content); $i < 6; $i++) {
         $jarres_content[] = "clé";
     }
 
     shuffle($jarres_content);
 
-    $jarres = [0, 1, 2, 3, 4];
+    $jarres = [0, 1, 2, 3, 4, 5];
 
 
     while(!empty($jarres)) {
         echo "Nombre de jarres restante :".count($jarres)."\n";
 
-        echo "Selectionnez une jarre entre 1 et 5.";
+        echo "Selectionnez une jarre entre 1 et 6.";
         $choix = readline();
 
          if ($choix === "q") {
@@ -51,8 +51,8 @@ while(count($inventaire) < $victoire) {
             exit;
         }
     
-        if (!in_array($choix, ["1", "2", "3", "4", "5"])) {
-            echo "Le choix est invalide. Tapez un numéro entre 1 et 5.";
+        if (!in_array($choix, ["1", "2", "3", "4", "5", "6"])) {
+            echo "Le choix est invalide. Tapez un numéro entre 1 et 6.";
             continue;
         }
         
